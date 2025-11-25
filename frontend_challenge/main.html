@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5c0ea596c1.js" crossorigin="anonymous"></script>
+
+    <!-- Defer used to keep script here and only run it once the DOM is fully loaded -->
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Title is not used in CodePen-->
+    <title>Newsletter</title>
+  </head>
+
+  <body class="p-4 min-h-screen flex items-center justify-center">
+    <div class="p-10 max-w-md w-full text-center border rounded-3xl shadow-2xl bg-white border-gray-100">
+      <div class="mb-3 text-5xl text-blue-600">
+        <i class="fa-solid fa-envelope-open-text"></i>
+      </div>
+
+      <h1 class="mb-2 text-3xl font-bold tracking-tight text-gray-800"> Stay Updated </h1>
+      <p class="mb-8 text-gray-500"> Subscribe to the <b> /mmtm/ </b> newsletter and never miss an update. </p>
+
+      <form id="subscribeForm" class="gap-4 flex flex-col">
+        <div class="relative">
+          <i class="absolute left-4 top-1/2 -translate-y-1/2 fa-solid fa-envelope text-gray-400"></i>
+          <input
+            type="email" id="emailInput" placeholder="Email address" required
+            class="p-3 pl-12 pr-4 w-full border rounded-xl shadow-sm outline-none border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
+          />
+        </div>
+
+        <button type="submit" id="subscribeBtn" class="p-3 gap-2 flex items-center justify-center rounded-xl shadow-md text-white bg-blue-600 hover:bg-blue-700 transition-transform active:scale-95">
+          <i class="fa-solid fa-paper-plane"></i> Subscribe
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

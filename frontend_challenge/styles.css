@@ -1,0 +1,4 @@
+/* Optional custom styles */
+body {
+  transition: background 0.1s linear;
+}
