@@ -1,0 +1,12 @@
+title,authors,isbn13,publication_year,series_name,series_position,pages,price_pence,currency,tags
+The Philosopher's Stone,J. K. Rowling,9780747532699,1997,Harry Potter,1,223,699,GBP,fantasy;children
+The Chamber of Secrets,J. K. Rowling,9780747538493,1998,Harry Potter,2,251,699,GBP,fantasy;children
+Clean Code,Robert C. Martin,9780132350884,2008,,,464,3199,USD,programming;craft
+Refactoring,Martin Fowler; Kent Beck,9780201485677,1999,,,431,3599,USD,programming;design
+The Hobbit,J. R. R. Tolkien,9780007458424,1937,The Hobbit,1,310,899,GBP,fantasy;classic
+The Two Towers,J. R. R. Tolkien,9780261102361,1954,The Lord of the Rings,2,352,1099,GBP,fantasy;epic
+The Return of the King,J. R. R. Tolkien,9780261102378,1955,The Lord of the Rings,3,416,1099,GBP,fantasy;epic
+The Pragmatic Programmer,Andrew Hunt; David Thomas,9780201616224,1999,,,352,3299,USD,programming;craft
+Unknown Book,Some Author,,2024,Experimental Series,1,120,499,GBP,experimental
+The Fellowship of the Ring,J. R.R. Tolkien,9780261102354,1954,The Lord of the Rings,1,423,1099,GBP,fantasy;epic
+The Sourcerer’s Stone,J. K. Rowling,9780747532699,1997,Harry Potter,1,223,699,GBP,fantasy;children
