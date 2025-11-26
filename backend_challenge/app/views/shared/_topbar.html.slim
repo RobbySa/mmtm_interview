@@ -1,0 +1,15 @@
+nav.bg-blue-600.text-white.sticky.top-0.z-50.shadow
+  .max-w-7xl.mx-auto.px-4.sm:px-6.lg:px-8
+    .flex.items-center.justify-between.h-16
+      / Left: Brand
+      .flex-shrink-0.text-xl.font-bold
+        = link_to "BackendChallenge", root_path, class: "hover:text-blue-200"
+
+      / Right: Navigation
+      .hidden.md:flex.space-x-6.text-sm.font-medium
+        = link_to "Books", books_path, class: "hover:text-blue-200"
+
+        = form_with url: import_books_path, method: :post, multipart: true do |f|
+          = f.file_field :file, id: "import-file-input", class: "hidden", onchange: "this.form.submit();"
+          label.bg-white.text-blue-700.px-3.py-1.rounded-md.text-sm.font-medium.hover:bg-blue-50.cursor-pointer.transition for="import-file-input"
+            | Import

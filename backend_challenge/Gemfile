@@ -4,11 +4,14 @@ ruby "3.1.0"
 
 # Default gems
 gem "bootsnap", require: false
+gem 'devise'
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "rails", "~> 7.1.1"
+gem 'slim-rails'
+gem 'smarter_csv', '~> 1.12', '>= 1.12.1'
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"

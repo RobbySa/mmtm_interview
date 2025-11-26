@@ -1,0 +1,30 @@
+.div-overflow-container.overflow-x-auto.w-full
+  table.min-w-full.divide-y.divide-slate-200
+    thead.bg-gradient-to-r.from-blue-600.to-blue-500
+      tr
+        th.header-cell-classes Title
+        th.header-cell-classes Authors
+        th.header-cell-classes ISBN-13
+        th.header-cell-classes Publication year
+        th.header-cell-classes Series name
+        th.header-cell-classes Series position
+        th.header-cell-classes Pages
+        th.header-cell-classes Price (pence)
+        th.header-cell-classes Currency
+        th.header-cell-classes Tags
+
+    tbody.bg-white.divide-y.divide-slate-100
+      - @rows.each do |row|
+        tr.hover:bg-blue-50
+          / could redirect to a page with more info
+          / td.body-cell-classes.text-slate-900 = link_to row[:name], book_path(book), class: "hover:underline text-blue-700"
+          td.body-cell-classes.text-slate-700 = row[:title]
+          td.body-cell-classes.text-slate-700 = row[:authors]
+          td.body-cell-classes.text-slate-700 = row[:isbn13]
+          td.body-cell-classes.text-slate-700 = row[:publication_year]
+          td.body-cell-classes.text-slate-700 = row[:series_name]
+          td.body-cell-classes.text-slate-700 = row[:series_position]
+          td.body-cell-classes.text-slate-700 = row[:pages]
+          td.body-cell-classes.text-slate-700 = row[:price_pence]
+          td.body-cell-classes.text-slate-700 = row[:currency]
+          td.body-cell-classes.text-slate-700 = row[:tags]

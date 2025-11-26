@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.header-cell-classes {
+  @apply px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider
+}
+
+.body-cell-classes {
+  @apply px-6 py-4 whitespace-nowrap text-sm font-semibold
+}
