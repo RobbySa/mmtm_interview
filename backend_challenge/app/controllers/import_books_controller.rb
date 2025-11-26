@@ -1,6 +1,9 @@
 class ImportBooksController < ApplicationController
   before_action :authenticate_user!
 
+  # tech-debt: the failures shouldn't be displayed like this
+  #            the frontend part should render the notices or alert
+  #            in a smart way
   def create
     if params[:file].present?
       file = params[:file]

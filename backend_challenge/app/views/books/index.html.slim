@@ -16,7 +16,7 @@
     tbody.bg-white.divide-y.divide-slate-100
       - @rows.each do |row|
         tr.hover:bg-blue-50
-          / could redirect to a page with more info
+          / should redirect to a page with more info such as other books in the series and a link to them
           / td.body-cell-classes.text-slate-900 = link_to row[:name], book_path(book), class: "hover:underline text-blue-700"
           td.body-cell-classes.text-slate-700 = row[:title]
           td.body-cell-classes.text-slate-700 = row[:authors]

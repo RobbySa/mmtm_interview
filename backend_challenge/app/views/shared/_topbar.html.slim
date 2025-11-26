@@ -12,6 +12,9 @@ nav.bg-blue-600.text-white.sticky.top-0.z-50.shadow
         - if user_signed_in?
           = form_with url: import_books_path, method: :post, multipart: true do |f|
             = f.file_field :file, id: "import-file-input", class: "hidden", onchange: "this.form.submit();"
-            label.bg-white.text-blue-700.px-3.py-1.rounded-md.text-sm.font-medium.hover:bg-blue-50.cursor-pointer.transition for="import-file-input" = 'Import'
+            label.button-classes for="import-file-input" = 'Import'
+          / THIS IS OUTSIDE THE 3 HOUR LIMIT
+          = button_to 'Logout', destroy_user_session_path, method: :delete, class: 'button-classes'
+          / THIS IS OUTSIDE THE 3 HOUR LIMIT
         - else
-          = link_to 'Login', new_user_session_path, class: 'bg-white text-blue-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-blue-50 cursor-pointer transition'
+          = link_to 'Login', new_user_session_path, class: 'button-classes'
