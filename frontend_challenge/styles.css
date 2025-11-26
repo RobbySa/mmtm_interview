@@ -2,3 +2,11 @@
 body {
   transition: background 0.1s linear;
 }
+
+.flex-fully-centred {
+  @apply flex items-center justify-center
+}
+
+.button-classes {
+  @apply p-3 gap-2 flex-fully-centred rounded-xl shadow-md text-white bg-blue-600 hover:bg-blue-700 transition-transform active:scale-95
+}
