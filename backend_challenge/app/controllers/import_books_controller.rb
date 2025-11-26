@@ -1,4 +1,6 @@
 class ImportBooksController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     if params[:file].present?
       file = params[:file]
