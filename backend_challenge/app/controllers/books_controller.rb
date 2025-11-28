@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.includes(:authors, :series).all
 
+    # tech-debt: This iterates the array twice
     @rows = @books.map do |book|
       {
         title: book.name,
@@ -9,7 +10,7 @@ class BooksController < ApplicationController
         isbn13: book.isbn13,
         publication_year: book.publication_year,
         series_name: book.series_name,
-        series_position: book.position,
+        series_position: book.position == 0 ? '' : book.position,
         pages: book.pages,
         price_pence: book.price_pence,
         currency: book.currency,

@@ -28,6 +28,8 @@ class BookImporter
 
   private
 
+  # Memoized both authors and series
+
   def create_book(book_data, series)
     Book.create(
       name: sanitise_field(book_data[:title]),
