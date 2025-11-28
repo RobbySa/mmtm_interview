@@ -6,12 +6,13 @@ class BookImporter
   def call
     ActiveRecord::Base.transaction do
       @books_data.each do |book_data|
-        puts book_data
         # Given more time this could be done better so that multiple authors don't have to be reloaded each time
+        # tech-debt: Might be worth to keep a memoized list of all the authors we will need for this service
         authors = book_data[:authors].split(';').map { |author| Author.find_or_create_by(name: sanitise_field(author)) }
         series = sanitise_field(book_data[:series_name]).present? ? Series.find_or_create_by(name: sanitise_field(book_data[:series_name])) : nil
 
         # Given more time the isbn13 error would be handled better
+        # tech-debt: Instead of just crashing set an error flag to true and store which line went wrong
         raise ArgumentError if Book.pluck(:isbn13).include? sanitise_field(book_data[:isbn13])
 
         book = create_book(book_data, series)
@@ -20,6 +21,7 @@ class BookImporter
     end
     { success: true }
   rescue StandardError => e
+    # tech-debt: Instead of putting the actual error a more specific one should be printed
     puts e.inspect
     { success: false }
   end

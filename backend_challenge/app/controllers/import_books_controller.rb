@@ -4,6 +4,8 @@ class ImportBooksController < ApplicationController
   # tech-debt: the failures shouldn't be displayed like this
   #            the frontend part should render the notices or alert
   #            in a smart way
+  # tech-debt: If this was part of an API application we would push this logic to
+  #            a sidekiq job to handle this asynchronously
   def create
     if params[:file].present?
       file = params[:file]

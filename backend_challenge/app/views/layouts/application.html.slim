@@ -9,6 +9,7 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
 
   body.bg-slate-50
+    / tech-debt: Here we should introduce a banner displaying alerts / notices so that we can notify the user
     = render "shared/topbar"
     
     main.container.mx-auto.mt-28.px-5.flex
